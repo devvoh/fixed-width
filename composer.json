@@ -1,0 +1,23 @@
+{
+  "name": "devvoh/fixedwidth",
+  "type": "library",
+  "description": "FixedWidth is a library to read and generate fixed-width data files",
+  "keywords": ["library", "fixed width"],
+  "homepage": "http://devvoh.com/fixedwidth",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Robin de Graaf",
+      "email": "hello@devvoh.com",
+      "homepage": "https://devvoh.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "FixedWidth\\": "src/"
+    }
+  }
+}

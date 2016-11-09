@@ -1,0 +1,5 @@
+DATA;0000000023;This is a comment               ;023;
+0000000089;WHY  ;NO;Y;N;Y;
+THIS IS A RANDOM LINE WOO;
+0000000089;WHY  ;YE;Y;1;Y;
+DATA;0000000023;This is a comment               ;023;
