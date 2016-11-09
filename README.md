@@ -16,7 +16,7 @@ You can define valid characters, and the line or data will be rejected if it doe
 
 Fixed-width can be installed by using [Composer](http://getcomposer.org/). Simply run:
 
-`composer require devvoh/fixed-width`
+`composer require devvoh/fixedwidth`
 
 ## License
 
