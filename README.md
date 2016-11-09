@@ -1,8 +1,8 @@
 ## Fixed Width File Reader & Generator
 
-[![Latest Stable Version](https://poser.pugx.org/devvoh/fixed-width/v/stable)](https://packagist.org/packages/devvoh/fixed-width)
-[![Latest Unstable Version](https://poser.pugx.org/devvoh/fixed-width/v/unstable)](https://packagist.org/packages/devvoh/fixed-width)
-[![License](https://poser.pugx.org/devvoh/fixed-width/license)](https://packagist.org/packages/devvoh/fixed-width)
+[![Latest Stable Version](https://poser.pugx.org/devvoh/fixedwidth/v/stable)](https://packagist.org/packages/devvoh/fixedwidth)
+[![Latest Unstable Version](https://poser.pugx.org/devvoh/fixedwidth/v/unstable)](https://packagist.org/packages/devvoh/fixedwidth)
+[![License](https://poser.pugx.org/devvoh/fixedwidth/license)](https://packagist.org/packages/devvoh/fixedwidth)
 
 Fixed-width is a simple library that can make working with fixed width file formats much easier. You define a Schema for a line, which can have a delimiter or not, and both the Reader and Generator will work with that Schema.
 
