@@ -4,7 +4,7 @@
   "description": "FixedWidth is a library to read and generate fixed-width data files",
   "keywords": ["library", "fixed width"],
   "homepage": "http://devvoh.com/fixedwidth",
-  "license": "MIT",
+  "license": "Unlicense",
   "authors": [
     {
       "name": "Robin de Graaf",
