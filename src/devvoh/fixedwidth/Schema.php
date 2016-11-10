@@ -1,9 +1,7 @@
 <?php
 /**
- * @package     FixedWidth
- * @license     MIT
+ * @license     Unlicense <https://unlicense.org>
  * @author      Robin de Graaf <hello@devvoh.com>
- * @copyright   2016, Robin de Graaf, devvoh webdevelopment
  */
 
 namespace Devvoh\FixedWidth;

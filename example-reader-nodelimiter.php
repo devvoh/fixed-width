@@ -1,4 +1,9 @@
 <?php
+/**
+ * @license     Unlicense <https://unlicense.org>
+ * @author      Robin de Graaf <hello@devvoh.com>
+ */
+
 require_once('./src/devvoh/fixedwidth/Generator.php');
 require_once('./src/devvoh/fixedwidth/Reader.php');
 require_once('./src/devvoh/fixedwidth/Schema.php');
