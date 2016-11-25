@@ -34,9 +34,9 @@ class Field
     protected $callback;
 
     /**
-     * @var array|null
+     * @var array
      */
-    protected $validCharacters;
+    protected $validCharacters = [];
 
     /**
      * @var array
@@ -136,7 +136,7 @@ class Field
     }
 
     /**
-     * @return array|null
+     * @return array
      */
     public function getValidCharacters()
     {
@@ -144,13 +144,12 @@ class Field
     }
 
     /**
-     * @param array|null $validCharacters
+     * @param array $validCharacters
      * @return $this
      */
-    public function setValidCharacters($validCharacters)
+    public function setValidCharacters(array $validCharacters)
     {
         $this->validCharacters = $validCharacters;
         return $this;
     }
-
 }

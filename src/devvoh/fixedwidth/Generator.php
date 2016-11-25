@@ -6,8 +6,8 @@
 
 namespace Devvoh\FixedWidth;
 
-class Generator {
-
+class Generator
+{
     /**
      * @var \Devvoh\FixedWidth\Schema
      */
@@ -131,5 +131,4 @@ class Generator {
         }
         return $dataItems;
     }
-
 }

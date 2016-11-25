@@ -41,7 +41,6 @@ class Reader
         $data = [];
         $lastPosition = 0;
         foreach ($this->schema->getFields() as $field) {
-            /** @var \Devvoh\FixedWidth\Schema\Field $field */
             $strPart = substr($string, $lastPosition, $field->getLength());
 
             if ($this->schema->getDelimiter() && strpos($strPart, $this->schema->getDelimiter()) !== false) {

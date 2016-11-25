@@ -19,7 +19,7 @@ class Schema
     protected $fields = [];
 
     /**
-     * @param $delimiter
+     * @param string $delimiter
      * @return $this
      */
     public function setDelimiter($delimiter)
@@ -42,7 +42,7 @@ class Schema
      * @param string        $padCharacter
      * @param int           $padPlacement
      * @param null|callable $callback
-     * @param null|array    $validCharacters
+     * @param array         $validCharacters
      * @return static
      */
     public function setField(
@@ -51,7 +51,7 @@ class Schema
         $padCharacter = ' ',
         $padPlacement = STR_PAD_RIGHT,
         $callback = null,
-        $validCharacters = null
+        $validCharacters = []
     ) {
         $field = new \Devvoh\FixedWidth\Schema\Field();
         $field->setKey($key);
@@ -80,9 +80,9 @@ class Schema
             $this->setField(
                 $field['key'],
                 $field['length'],
-                isset($field['padCharacter']) ? $field['padCharacter'] : ' ',
-                isset($field['padPlacement']) ? $field['padPlacement'] : STR_PAD_RIGHT,
-                isset($field['callback']) ? $field['callback'] : null,
+                isset($field['padCharacter'])    ? $field['padCharacter']    : ' ',
+                isset($field['padPlacement'])    ? $field['padPlacement']    : STR_PAD_RIGHT,
+                isset($field['callback'])        ? $field['callback']        : null,
                 isset($field['validCharacters']) ? $field['validCharacters'] : null
             );
         }
@@ -91,7 +91,7 @@ class Schema
 
     /**
      * @param string $key
-     * @return array|null
+     * @return \Devvoh\FixedWidth\Schema\Field|null
      */
     public function getField($key)
     {
@@ -102,7 +102,7 @@ class Schema
     }
 
     /**
-     * @return array
+     * @return \Devvoh\FixedWidth\Schema\Field[]
      */
     public function getFields()
     {
@@ -123,7 +123,7 @@ class Schema
 
     /**
      * @param $json
-     * @return Schema
+     * @return \Devvoh\FixedWidth\Schema
      */
     public static function createFromJson($json)
     {
@@ -146,9 +146,14 @@ class Schema
                 $existingValueLength = isset($schemaData[$key]) ? $schemaData[$key]['length'] : 0;
                 $currentValueLength  = strlen((string)$value);
 
+                $properLength        = $currentValueLength;
+                if ($existingValueLength > $properLength) {
+                    $properLength = $existingValueLength;
+                }
+
                 $schemaData[$key] = [
                     'key'          => $key,
-                    'length'       => ($currentValueLength > $existingValueLength) ? $currentValueLength : $existingValueLength,
+                    'length'       => $properLength,
                     'padCharacter' => ' ',
                     'padPlacement' => STR_PAD_RIGHT,
                     'callback'     => null,
