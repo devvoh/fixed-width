@@ -83,7 +83,7 @@ class Schema
                 isset($field['padCharacter'])    ? $field['padCharacter']    : ' ',
                 isset($field['padPlacement'])    ? $field['padPlacement']    : STR_PAD_RIGHT,
                 isset($field['callback'])        ? $field['callback']        : null,
-                isset($field['validCharacters']) ? $field['validCharacters'] : null
+                isset($field['validCharacters']) ? $field['validCharacters'] : []
             );
         }
         return $this;
