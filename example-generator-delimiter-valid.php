@@ -4,10 +4,7 @@
  * @author      Robin de Graaf <hello@devvoh.com>
  */
 
-require_once('./src/devvoh/fixedwidth/Generator.php');
-require_once('./src/devvoh/fixedwidth/Reader.php');
-require_once('./src/devvoh/fixedwidth/Schema.php');
-require_once('./src/devvoh/fixedwidth/Schema/Field.php');
+require_once __DIR__ . '/vendor/autoload.php';
 
 $schemaData = new \Devvoh\FixedWidth\Schema;
 $schemaData->setDelimiter(';');
