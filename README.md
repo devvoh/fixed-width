@@ -8,7 +8,7 @@
 
 ## Install
 
-Php 7.1+ and [composer](https://getcomposer.org) are required.
+Php 7.2+ and [composer](https://getcomposer.org) are required.
 
 ```bash
 $ composer require devvoh/fixed-width
