@@ -1,5 +1,0 @@
-DATA0000000023This is a comment               023
-0000000089WHY  NOYNY
-THIS IS RANDOM LINE!
-0000000089WHY  YEY1Y
-DATA0000000023This is a comment               023
