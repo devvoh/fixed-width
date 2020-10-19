@@ -3,10 +3,10 @@
 namespace Devvoh\FixedWidth\Tests\Fields;
 
 use Devvoh\FixedWidth\Field;
-use Devvoh\FixedWidth\Field\SupportsPadding;
+use Devvoh\FixedWidth\Field\FieldWithPadding;
 use Devvoh\FixedWidth\PadPlacement;
 
-class CenteredField implements Field, SupportsPadding
+class CenteredField implements Field, FieldWithPadding
 {
     public function getKey(): string
     {

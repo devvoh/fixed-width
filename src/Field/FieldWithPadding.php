@@ -4,7 +4,7 @@ namespace Devvoh\FixedWidth\Field;
 
 use Devvoh\FixedWidth\PadPlacement;
 
-interface SupportsPadding
+interface FieldWithPadding
 {
     public function getPadCharacter(): string;
     public function getPadPlacement(): PadPlacement;

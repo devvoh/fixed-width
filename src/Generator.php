@@ -2,9 +2,9 @@
 
 namespace Devvoh\FixedWidth;
 
-use Devvoh\FixedWidth\Field\SupportsAllowedCharacters;
-use Devvoh\FixedWidth\Field\SupportsPadding;
-use Devvoh\FixedWidth\Field\SupportsTransforming;
+use Devvoh\FixedWidth\Field\FieldWithAllowedCharacters;
+use Devvoh\FixedWidth\Field\FieldWithPadding;
+use Devvoh\FixedWidth\Field\FieldWithTransforming;
 use LogicException;
 
 class Generator
@@ -70,7 +70,7 @@ class Generator
 
                 $value = (string)$value;
 
-                if ($field instanceof SupportsTransforming) {
+                if ($field instanceof FieldWithTransforming) {
                     $value = $field->unTransform($value);
                 }
 
@@ -85,7 +85,7 @@ class Generator
                     );
                 }
 
-                if ($field instanceof SupportsPadding) {
+                if ($field instanceof FieldWithPadding) {
                     $value = str_pad(
                         $value,
                         $field->getLength(),
@@ -94,7 +94,7 @@ class Generator
                     );
                 }
 
-                if ($field instanceof SupportsAllowedCharacters && $field->getAllowedCharacters() !== null) {
+                if ($field instanceof FieldWithAllowedCharacters && $field->getAllowedCharacters() !== null) {
                     $invalidCharacters = array_diff(
                         str_split($value),
                         str_split($field->getAllowedCharacters())

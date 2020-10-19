@@ -2,9 +2,9 @@
 
 namespace Devvoh\FixedWidth;
 
-use Devvoh\FixedWidth\Field\SupportsAllowedCharacters;
-use Devvoh\FixedWidth\Field\SupportsPadding;
-use Devvoh\FixedWidth\Field\SupportsTransforming;
+use Devvoh\FixedWidth\Field\FieldWithAllowedCharacters;
+use Devvoh\FixedWidth\Field\FieldWithPadding;
+use Devvoh\FixedWidth\Field\FieldWithTransforming;
 use LogicException;
 
 class Reader
@@ -56,7 +56,7 @@ class Reader
 
             $value = trim($value);
 
-            if ($field instanceof SupportsPadding) {
+            if ($field instanceof FieldWithPadding) {
                 switch ($field->getPadPlacement()) {
                     case PadPlacement::LEFT():
                         $value = ltrim($value, $field->getPadCharacter());
@@ -72,7 +72,7 @@ class Reader
                 }
             }
 
-            if ($field instanceof SupportsAllowedCharacters && $field->getAllowedCharacters() !== null) {
+            if ($field instanceof FieldWithAllowedCharacters && $field->getAllowedCharacters() !== null) {
                 $invalidCharacters = array_diff(
                     str_split($value),
                     str_split($field->getAllowedCharacters())
@@ -90,7 +90,7 @@ class Reader
                 }
             }
 
-            if ($field instanceof SupportsTransforming) {
+            if ($field instanceof FieldWithTransforming) {
                 $value = $field->transform($value);
             }
 

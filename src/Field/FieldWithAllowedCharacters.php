@@ -2,7 +2,7 @@
 
 namespace Devvoh\FixedWidth\Field;
 
-interface SupportsAllowedCharacters
+interface FieldWithAllowedCharacters
 {
     public function getAllowedCharacters(): ?string;
 }

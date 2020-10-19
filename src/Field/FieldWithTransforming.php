@@ -2,7 +2,7 @@
 
 namespace Devvoh\FixedWidth\Field;
 
-interface SupportsTransforming
+interface FieldWithTransforming
 {
     public function transform(string $value);
     public function unTransform($value): string;

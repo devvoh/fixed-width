@@ -2,11 +2,11 @@
 
 namespace Devvoh\FixedWidth;
 
-use Devvoh\FixedWidth\Field\SupportsAllowedCharacters;
-use Devvoh\FixedWidth\Field\SupportsPadding;
-use Devvoh\FixedWidth\Field\SupportsTransforming;
+use Devvoh\FixedWidth\Field\FieldWithAllowedCharacters;
+use Devvoh\FixedWidth\Field\FieldWithPadding;
+use Devvoh\FixedWidth\Field\FieldWithTransforming;
 
-class CustomField implements Field, SupportsAllowedCharacters, SupportsTransforming, SupportsPadding
+class CustomField implements Field, FieldWithAllowedCharacters, FieldWithTransforming, FieldWithPadding
 {
     /** @var string */
     private $key;

@@ -3,10 +3,10 @@
 namespace Devvoh\FixedWidth\Tests\Fields;
 
 use Devvoh\FixedWidth\Field;
-use Devvoh\FixedWidth\Field\SupportsTransforming;
+use Devvoh\FixedWidth\Field\FieldWithTransforming;
 use Devvoh\FixedWidth\PadPlacement;
 
-class BooleanField implements Field, SupportsTransforming
+class BooleanField implements Field, FieldWithTransforming
 {
     public function getKey(): string
     {

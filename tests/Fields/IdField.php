@@ -3,11 +3,11 @@
 namespace Devvoh\FixedWidth\Tests\Fields;
 
 use Devvoh\FixedWidth\Field;
-use Devvoh\FixedWidth\Field\SupportsPadding;
-use Devvoh\FixedWidth\Field\SupportsTransforming;
+use Devvoh\FixedWidth\Field\FieldWithPadding;
+use Devvoh\FixedWidth\Field\FieldWithTransforming;
 use Devvoh\FixedWidth\PadPlacement;
 
-class IdField implements Field, SupportsPadding, SupportsTransforming
+class IdField implements Field, FieldWithPadding, FieldWithTransforming
 {
     public function getKey(): string
     {
